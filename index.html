@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Valentine's Day 2014</title>
+  <link href='http://fonts.googleapis.com/css?family=Poller+One|Peralta' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #intro {
+      font-size: 92px;
+      font-family: 'Poller One', cursive;
+      height: 600px;
+      margin: 0 auto;
+      text-align: center;
+      width: 1000px;
+    }
+    #instructions {
+      font-size: 24px;
+      margin-top: 200px;
+    }
+    #text-cont {
+      margin: 0 auto;
+      overflow: hidden;
+      width: 1000px;
+    }
+    .text {
+      background-color: #ddd;
+      font-size: 56px;
+      font-family: 'Peralta', cursive;
+      margin: 36px 0;
+      position: relative;
+      width: 900px;
+    }
+    .right {
+      left: 100%;
+      text-align: left;
+      margin-left: 100px;
+    }
+    .left {
+      left: -100%;
+      text-align: right;
+      margin-right: 100px;
+    }
+    .grad0 {
+      background-color: #ffdfdf;
+    }
+    .grad1 {
+      background-color: #fdd5d4;
+    }
+    .grad2 {
+      background-color: #fcccc9;
+    }
+    .grad3 {
+      background-color: #fbc3bf;
+    }
+    .grad4 {
+      background-color: #f9b9b4;
+    }
+    .grad5 {
+      background-color: #f8b0a9;
+    }
+    .grad6 {
+      background-color: #f7a79f;
+    }
+    .grad7 {
+      background-color: #f69e94;
+    }
+    .grad8 {
+      background-color: #f4948a;
+    }
+    .grad9 {
+      background-color: #f38b7f;
+    }
+    .grad10 {
+      background-color: #f28274;
+    }
+    .grad11 {
+      background-color: #f0786a;
+    }
+    .grad12 {
+      background-color: #ef6f5f;
+    }
+    .grad13 {
+      background-color: #ee6655;
+    }
+    .grad14 {
+      background-color: #ed5d4a;
+    }
+    .grad15 {
+      background-color: #eb533f;
+    }
+    .grad16 {
+      background-color: #ea4a35;
+    }
+    .grad17 {
+      background-color: #e9412a;
+    }
+    .grad18 {
+      background-color: #e83820;
+    }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script>
+    function backfill(idx) {
+      for(var i=0; i<idx; i++) {
+        $(".grad" + i).css('left', 0);
+      }
+    }
+    function get_idx() {
+      var max_scroll = $(document).height() - $(window).height();
+      var scroll_ratio = $(window).scrollTop() / max_scroll;
+      return Math.round(scroll_ratio*19) - 1;
+    }
+    $(document).ready(function() {
+      window.setTimeout(function() {
+        $('#instructions').fadeIn();
+      }, 1800);
+      $(window).scroll(function() {
+        backfill(get_idx());
+        $(".grad" + (get_idx())).animate({left: '0'}, 400);
+      });
+    });
+  </script>
+</head>
+<div id="marker"></div>
+<div id="intro">
+  Happy Valentine's Day
+  <div id="instructions" style="display: none;">(scroll down)</div>
+</div>
+<div id="text-cont">
+  <div class="text right grad0">My dearest Abby,</div>
+  <div class="text left grad1">Today is Valentine's Day.</div>
+  <div class="text right grad2">Today there's an excuse</div>
+  <div class="text left grad3">to tell someone you love</div>
+  <div class="text right grad4">that you love them.</div>
+  <div class="text left grad5">But I love you everyday.</div>
+  <div class="text right grad6">Every morning I wake up</div>
+  <div class="text left grad7">and I'm thankful for you.</div>
+  <div class="text right grad8">Every day I think about</div>
+  <div class="text left grad9">how much I love you,</div>
+  <div class="text right grad10">and how much joy you bring</div>
+  <div class="text left grad11">into my life.</div>
+  <div class="text right grad12">You are beautiful, amazing,</div>
+  <div class="text left grad13">wonderful and kind,</div>
+  <div class="text right grad14">and I wouldn't be anything</div>
+  <div class="text left grad15">without you.</div>
+  <div class="text right grad16">Happy Valentine's day!</div>
+  <div class="text left grad17">Love you forever,</div>
+  <div class="text right grad18">T-$</div>
+</div>
+</body>
+</html>
